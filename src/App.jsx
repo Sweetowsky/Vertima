@@ -1,35 +1,89 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="font-sans bg-gray-50 min-h-screen">
+      {/* Pasek kontaktowy */}
+      <div className="bg-[#352e4f] text-white text-center py-2 text-sm">
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          📞 <a href="tel:535969625" className="underline">535 969 625</a> | ✉️ <a href="mailto:vertima.ogrodzenia@gmail.com" className="underline">vertima.ogrodzenia@gmail.com</a>
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      {/* Nagłówek z logo */}
+      <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <img src="/logo.jpg" alt="Vertima Logo" className="h-12 w-auto" />
+          <h1 className="text-2xl font-bold text-[#352e4f]">Vertima Ogrodzenia Systemowe</h1>
+        </div>
+        <nav>
+          <ul className="flex space-x-4">
+            <li><a href="#about" className="hover:text-green-500 text-lg">O nas</a></li>
+            <li><a href="#services" className="hover:text-green-500 text-lg">Oferta</a></li>
+            <li><a href="#projects" className="hover:text-green-500 text-lg">Realizacje</a></li>
+            <li><a href="#contact" className="hover:text-green-500 text-lg">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* Sekcja skrótów */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+        {[
+          { title: "Zakres usług", img: "https://via.placeholder.com/300x200?text=Zakres+us%C5%82ug" },
+          { title: "Nasze realizacje", img: "https://via.placeholder.com/300x200?text=Nasze+realizacje" },
+          { title: "Ogrodzenia panelowe", img: "https://via.placeholder.com/300x200?text=Ogrodzenia+panelowe" },
+          { title: "Bramy palisadowe", img: "https://via.placeholder.com/300x200?text=Bramy+palisadowe" },
+          { title: "Bramy panelowe", img: "https://via.placeholder.com/300x200?text=Bramy+panelowe" },
+        ].map((item, index) => (
+          <div key={index} className="relative cursor-pointer">
+            <img src={item.img} alt={item.title} className="w-full h-40 object-cover rounded shadow" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-xl font-semibold text-white hover:bg-opacity-70 transition">
+              {item.title}
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* Sekcja O nas */}
+      <section id="about" className="py-12 px-6 text-center">
+        <h2 className="text-3xl font-semibold text-gray-800">O nas</h2>
+        <p className="mt-4 text-gray-600">
+          Specjalizujemy się w montażu ogrodzeń dla domów i firm. Gwarantujemy solidność i estetykę.
+        </p>
+      </section>
+
+      {/* Sekcja Oferta */}
+      <section id="services" className="py-12 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-semibold text-gray-800">Nasza oferta</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-6 bg-white rounded shadow text-lg">Montaż ogrodzeń</div>
+          <div className="p-6 bg-white rounded shadow text-lg">Bramy i furtki</div>
+          <div className="p-6 bg-white rounded shadow text-lg">Serwis i konserwacja</div>
+        </div>
+      </section>
+
+      {/* Sekcja Realizacje */}
+      <section id="projects" className="py-12 px-6 text-center">
+        <h2 className="text-3xl font-semibold text-gray-800">Nasze realizacje</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="h-40 bg-gray-300 rounded">Zdjęcie 1</div>
+          <div className="h-40 bg-gray-300 rounded">Zdjęcie 2</div>
+          <div className="h-40 bg-gray-300 rounded">Zdjęcie 3</div>
+        </div>
+      </section>
+
+      {/* Stopka */}
+      <footer className="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; {new Date().getFullYear()} Vertima Ogrodzenia Systemowe. Wszelkie prawa zastrzeżone.</p>
+        <p>📞 535 969 625 | ✉️ vertima.ogrodzenia@gmail.com</p>
+        <p>📍 Bełchów, ul. Ruciana 8</p>
+        <p><a href="#" className="underline">Polityka prywatności</a> | <a href="#" className="underline">Cookies</a></p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <span className="cursor-pointer text-xl">📘</span> {/* Facebook */}
+          <span className="cursor-pointer text-xl">📸</span> {/* Instagram */}
+          <span className="cursor-pointer text-xl">🐦</span> {/* Twitter */}
+        </div>
+      </footer>
+    </div>
+  );
+}
