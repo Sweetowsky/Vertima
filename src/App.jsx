@@ -13,8 +13,8 @@ export default function App() {
       {/* Nagłówek z logo */}
       <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <img src="/logo.jpg" alt="Vertima Logo" className="h-12 w-auto" />
-          <h1 className="text-2xl font-bold text-[#352e4f]">Vertima Ogrodzenia Systemowe</h1>
+          <img src="logo.jpg" alt="Vertima Logo" className="h-12 w-auto" />
+          <h1 className="text-2xl font-bold text-[#352e4f]"></h1>
         </div>
         <nav>
           <ul className="flex space-x-4">
