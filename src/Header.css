@@ -1,0 +1,32 @@
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.company-name {
+    margin-left: 20px;
+}
+
+.company-name h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.company-name p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
