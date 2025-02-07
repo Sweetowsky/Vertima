@@ -11,13 +11,13 @@ export default function App() {
       </div>
 
       {/* Nagłówek z logo */}
-      <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+      <header className="bg-white shadow-md py-4 px-6 flex flex-wrap justify-between items-center">
         <div className="flex items-center space-x-4">
-          <img src="logo.jpg" alt="Logo" className="h-10" />
+          <img src="logo.jpg" alt="Logo" className="h-16" />
           <h1 className="text-2xl font-bold text-[#352e4f] hidden md:block">Vertima Ogrodzenia Systemowe</h1>
         </div>
-        <nav>
-          <ul className="flex space-x-4">
+        <nav className="w-full md:w-auto mt-4 md:mt-0">
+          <ul className="flex flex-wrap justify-center md:justify-end space-x-4">
             <li><a href="#about" className="hover:text-green-500 text-lg">O nas</a></li>
             <li><a href="#services" className="hover:text-green-500 text-lg">Oferta</a></li>
             <li><a href="#projects" className="hover:text-green-500 text-lg">Realizacje</a></li>
