@@ -27,11 +27,11 @@ export default function App() {
       </header>
 
       {/* Sekcja Hero */}
-      <section className="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-white" style={{ backgroundImage: 'url(1.jpg)' }}>
-        <div className="bg-cover bg-opacity-50 p-8 rounded-xl shadow-lg text-center">
+      <section className="relative bg-cover bg-center h-[60vh] flex items-end justify-center text-white pb-12" style={{ backgroundImage: 'url(1.jpg)' }}>
+        <div className="p-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Solidne i Estetyczne Ogrodzenia</h2>
           <p className="mb-6 text-lg">Zapewniamy jakość, na której możesz polegać!</p>
-          <a href="#contact" className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full transition duration-300">Skontaktuj się z nami</a>
+          <a href="tel:535969625" className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full transition duration-300">Skontaktuj się z nami</a>
         </div>
       </section>
 
@@ -41,16 +41,15 @@ export default function App() {
         <p className="mt-4 text-gray-600">
           Specjalizujemy się w montażu ogrodzeń dla domów i firm. Gwarantujemy solidność i estetykę.
         </p>
-        <p className="mt-2 italic text-[#352e4f] font-bold">Vertima - Spierdolił robotę i go nima</p>
       </section>
 
       {/* Sekcja Oferta */}
       <section id="services" className="py-12 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-semibold text-gray-800">Nasza oferta</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white rounded shadow text-lg">Montaż ogrodzeń</div>
-          <div className="p-6 bg-white rounded shadow text-lg">Bramy i furtki</div>
-          <div className="p-6 bg-white rounded shadow text-lg">Serwis i konserwacja</div>
+          <div className="p-6 bg-white rounded shadow text-lg hover:bg-gray-200 transition">Montaż ogrodzeń</div>
+          <div className="p-6 bg-white rounded shadow text-lg hover:bg-gray-200 transition">Bramy i furtki</div>
+          <div className="p-6 bg-white rounded shadow text-lg hover:bg-gray-200 transition">Serwis i konserwacja</div>
         </div>
       </section>
 
@@ -58,9 +57,18 @@ export default function App() {
       <section id="projects" className="py-12 px-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-800">Nasze realizacje</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <img src="1.jpg" alt="Realizacja 1" className="w-full h-60 object-cover rounded" />
-          <img src="2.jpg" alt="Realizacja 2" className="w-full h-60 object-cover rounded" />
-          <img src="3.jpg" alt="Realizacja 3" className="w-full h-60 object-cover rounded" />
+          <div className="relative">
+            <img src="1.jpg" alt="Realizacja Bełchów" className="w-full h-60 object-cover rounded" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gray bg-opacity-70 text-white text-center py-2 rounded-b text-sm font-medium">Realizacja Bełchów</div>
+          </div>
+          <div className="relative">
+            <img src="2.jpg" alt="Realizacja Łyszkowice" className="w-full h-60 object-cover rounded" />
+            <div className="absolute bottom-0 left-0 right-0 bg-cover bg-opacity-70 text-black text-center py-2 rounded-b text-sm font-medium">Realizacja Łyszkowice</div>
+          </div>
+          <div className="relative">
+            <img src="3.jpg" alt="Realizacja Maków" className="w-full h-60 object-cover rounded" />
+            <div className="absolute bottom-0 left-0 right-0 bg-cover bg-opacity-70 text-white text-center py-2 rounded-b text-sm font-medium">Realizacja Maków</div>
+          </div>
         </div>
       </section>
 
@@ -71,7 +79,8 @@ export default function App() {
           <img src="instagram.png" alt="Instagram" className="h-6" />
           <img src="tik-tok.png" alt="TikTok" className="h-6" />
         </div>
-        <p className="mt-4">📞 535 969 625 | ✉️ vertima.ogrodzenia@gmail.com
+        <p className="mt-4">
+📞 535 969 625 | ✉️ vertima.ogrodzenia@gmail.com
         </p>
         <p>📍 Bełchów, ul. Ruciana 8</p>
         <p><a href="#" className="underline">Polityka prywatności</a> | <a href="#" className="underline">Cookies</a></p>
