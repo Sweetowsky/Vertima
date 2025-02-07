@@ -13,8 +13,8 @@ export default function App() {
       {/* Nagłówek z logo */}
       <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <img src="logo.jpg" alt="Vertima Logo" className="h-12 w-auto" />
-          <h1 className="text-2xl font-bold text-[#352e4f]"></h1>
+          <img src="logo.jpg" alt="Logo" className="h-10" />
+          <h1 className="text-2xl font-bold text-[#352e4f] hidden md:block">Vertima Ogrodzenia Systemowe</h1>
         </div>
         <nav>
           <ul className="flex space-x-4">
@@ -26,22 +26,13 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Sekcja skrótów */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-        {[
-          { title: "Zakres usług", img: "https://via.placeholder.com/300x200?text=Zakres+us%C5%82ug" },
-          { title: "Nasze realizacje", img: "https://via.placeholder.com/300x200?text=Nasze+realizacje" },
-          { title: "Ogrodzenia panelowe", img: "https://via.placeholder.com/300x200?text=Ogrodzenia+panelowe" },
-          { title: "Bramy palisadowe", img: "https://via.placeholder.com/300x200?text=Bramy+palisadowe" },
-          { title: "Bramy panelowe", img: "https://via.placeholder.com/300x200?text=Bramy+panelowe" },
-        ].map((item, index) => (
-          <div key={index} className="relative cursor-pointer">
-            <img src={item.img} alt={item.title} className="w-full h-40 object-cover rounded shadow" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-xl font-semibold text-white hover:bg-opacity-70 transition">
-              {item.title}
-            </div>
-          </div>
-        ))}
+      {/* Sekcja Hero */}
+      <section className="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-white" style={{ backgroundImage: 'url(1.jpg)' }}>
+        <div className="bg-cover bg-opacity-50 p-8 rounded-xl shadow-lg text-center">
+          <h2 className="text-4xl font-bold mb-4">Solidne i Estetyczne Ogrodzenia</h2>
+          <p className="mb-6 text-lg">Zapewniamy jakość, na której możesz polegać!</p>
+          <a href="#contact" className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full transition duration-300">Skontaktuj się z nami</a>
+        </div>
       </section>
 
       {/* Sekcja O nas */}
@@ -50,6 +41,7 @@ export default function App() {
         <p className="mt-4 text-gray-600">
           Specjalizujemy się w montażu ogrodzeń dla domów i firm. Gwarantujemy solidność i estetykę.
         </p>
+        <p className="mt-2 italic text-[#352e4f] font-bold">Vertima - Spierdolił robotę i go nima</p>
       </section>
 
       {/* Sekcja Oferta */}
@@ -66,23 +58,24 @@ export default function App() {
       <section id="projects" className="py-12 px-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-800">Nasze realizacje</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="h-40 bg-gray-300 rounded">Zdjęcie 1</div>
-          <div className="h-40 bg-gray-300 rounded">Zdjęcie 2</div>
-          <div className="h-40 bg-gray-300 rounded">Zdjęcie 3</div>
+          <img src="1.jpg" alt="Realizacja 1" className="w-full h-60 object-cover rounded" />
+          <img src="2.jpg" alt="Realizacja 2" className="w-full h-60 object-cover rounded" />
+          <img src="3.jpg" alt="Realizacja 3" className="w-full h-60 object-cover rounded" />
         </div>
       </section>
 
       {/* Stopka */}
       <footer className="bg-gray-800 text-white py-4 text-center">
-        <p>&copy; {new Date().getFullYear()} Vertima Ogrodzenia Systemowe. Wszelkie prawa zastrzeżone.</p>
-        <p>📞 535 969 625 | ✉️ vertima.ogrodzenia@gmail.com</p>
+        <div className="flex justify-center space-x-4">
+          <img src="facebook.png" alt="Facebook" className="h-6" />
+          <img src="instagram.png" alt="Instagram" className="h-6" />
+          <img src="tik-tok.png" alt="TikTok" className="h-6" />
+        </div>
+        <p className="mt-4">📞 535 969 625 | ✉️ vertima.ogrodzenia@gmail.com
+        </p>
         <p>📍 Bełchów, ul. Ruciana 8</p>
         <p><a href="#" className="underline">Polityka prywatności</a> | <a href="#" className="underline">Cookies</a></p>
-        <div className="flex justify-center space-x-4 mt-2">
-          <span className="cursor-pointer text-xl">📘</span> {/* Facebook */}
-          <span className="cursor-pointer text-xl">📸</span> {/* Instagram */}
-          <span className="cursor-pointer text-xl">🐦</span> {/* Twitter */}
-        </div>
+        <p className="mt-2">&copy; {new Date().getFullYear()} Vertima Ogrodzenia Systemowe. Wszelkie prawa zastrzeżone.</p>
       </footer>
     </div>
   );
