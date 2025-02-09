@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="font-sans bg-gray-50 min-h-screen">
       {/* Pasek kontaktowy */}
@@ -11,13 +13,36 @@ export default function App() {
       </div>
 
       {/* Nagłówek z logo */}
-      <header className="bg-white shadow-md py-4 px-6 flex flex-wrap justify-between items-center">
+      <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <img src="logo.jpg" alt="Logo" className="h-16" />
           <h1 className="text-2xl font-bold text-[#352e4f] hidden md:block">Vertima Ogrodzenia Systemowe</h1>
         </div>
-        <nav className="w-full md:w-auto mt-4 md:mt-0">
-          <ul className="flex flex-wrap justify-center md:justify-end space-x-4">
+        <button
+          className="md:hidden text-gray-800 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+        <nav
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full md:w-auto mt-4 md:mt-0 md:flex md:items-center`}
+        >
+          <ul className="flex flex-col md:flex-row md:space-x-4">
             <li><a href="#about" className="hover:text-green-500 text-lg">O nas</a></li>
             <li><a href="#services" className="hover:text-green-500 text-lg">Oferta</a></li>
             <li><a href="#projects" className="hover:text-green-500 text-lg">Realizacje</a></li>
